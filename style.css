@@ -1,0 +1,125 @@
+#window {
+  background: black;
+  height: 400px;
+  width: 400px;
+  border-radius:20px;
+}
+
+#ingameText {
+  position:absolute;
+  font-family:tahoma;
+  color:white;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%);
+  text-align:center;
+  font-size:25px;
+  font-weight:bold;
+}
+
+#messageText {
+  position:absolute;
+  font-family:tahoma;
+  font-weight:bold;
+  font-size:15px;
+  left:1%;
+  bottom:1%;
+}
+
+#restartButton {
+  color:black;
+  background:orange;
+  font-family:monospace;
+  font-size:25px;
+  position:absolute;
+  top:2.5%;
+  right:2.5%;
+  cursor:pointer;
+  padding-left:10px;
+  padding-right:10px;
+  border-radius:25px;
+  font-weight:bold;
+  box-shadow:0 0 4px orange;
+}
+
+#scoreDisplayer{
+  font-family:monospace;
+  font-weight:bold;
+  font-size:25px;
+  background:none;
+  border:0;
+  color:white;
+  position:absolute;
+  top:1%;
+  left:1%;
+  width:50%;
+}
+
+#scoreDisplayer:focus{
+  outline:none;
+}
+
+.center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin: 0;
+}
+
+.square {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+#player {
+  background: white;
+  top: 90%;
+  left: 50%;
+}
+
+.playerJumping {
+  animation-name: jumpAni;
+  animation-duration: 0.75s;
+}
+@keyframes jumpAni {
+  0% {
+    top:90%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top:90%;
+  }
+}
+
+#block {
+  background: red;
+  top: 90%;
+  left: 10%;
+}
+@keyframes blockAni {
+  0% {
+    left: 10%;
+  }
+  50% {
+    left: 90%;
+  }
+  100% {
+    left: 10%;
+  }
+}
+
+.blockStartMoving {
+  animation-name: blockAni;
+  animation-duration:2s;
+  animation-iteration-count: infinite;
+  animation-timing-function:ease-in;
+}
